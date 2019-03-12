@@ -11,9 +11,9 @@ public class Main {
         try {
             for (;;) {
                 writer = new BufferedWriter(new FileWriter(fileName, true));
-                //String str = "2017-07-27 06:44:54 +0900 [info]: AUDIT_LOG My content is added through this iteration : " + ++counter + ".\n";
-                //String str = "2017-07-27 06:44:54 +0900 [info]: AUDIT_LOG My content is added through this iteration : " + ++counter + ".\n";
-                String str = "time=\"2018-12-20T08:53:53Z\" level=info msg=\"HWIM: Entered gRPC FetchENodeBBasedOnSerialNumber()\" SerialNumber=120200002517CSP0007\n";
+                String str = "time=\"2018-12-20T08:53:53Z\" level=info " +
+                        "event_status=\"SUCCESS\" " +
+                        "msg=\"AUDIT_LOG SUCCESS A hardware with id: " + counter++ + " was successfully created by user: test@test.com\"\n";
                 writer.append(str);
                 writer.flush();
                 System.out.println("Str : " + str);
