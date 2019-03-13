@@ -11,10 +11,8 @@ public class Main {
         try {
             for (;;) {
                 writer = new BufferedWriter(new FileWriter(fileName, true));
-                String str = "{\"log\": \"time=2018-12-20T08:53:53Z level=info tag=AUDIT_LOG msg=HWIM: Entered gRPC FetchENodeBBasedOnSerialNumber() SerialNumber=120200002517CSP0007\"}\n";
-                String str1 = "{\"log\": \"time=2018-12-20T08:53:53Z level=info msg=HWIM: Entered gRPC FetchENodeBBasedOnSerialNumber() SerialNumber=120200002517CSP0007\"}\n";
-                //String str = "{\"log\": \"time=2018-12-20T08:53:53Z level=info msg=HWIM: Entered gRPC FetchENodeBBasedOnSerialNumber() SerialNumber=120200002517CSP0007\"}\n";
-                //String str = "time=2018-12-20T08:53:53Z level=info event_status=SUCCESS tag=AUDIT_LOG msg=A hardware with id: " + counter++ + " was successfully created by user: test@test.com\n";
+                String str = "{\"log\": \"time=2018-12-20T08:53:53Z level=info tag=AUDIT_LOG msg=HW: Entered gRPC FetchBasedOnSerialNumber() SerialNumber=24454332\"}\n";
+                String str1 = "{\"log\": \"time=2018-12-20T08:53:53Z level=info msg=HW: Entered gRPC FetchBasedOnSerialNumber() SerialNumber=24454332\"}\n";
                 writer.append(str);
                 writer.append(str1);
                 writer.flush();
